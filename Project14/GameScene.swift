@@ -86,6 +86,7 @@ class GameScene: SKScene {
             gameOver.position = CGPoint(x: 512, y: 384)
             gameOver.zPosition = 1
             addChild(gameOver)
+            run(SKAction.playSoundFileNamed("gameover", waitForCompletion: true))
             return
         }
         popupTime *= 0.991
