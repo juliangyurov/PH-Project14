@@ -10,12 +10,14 @@ import SpriteKit
 class GameScene: SKScene {
     var slots = [WhackSlot]()
     var gameScore: SKLabelNode!
+    var gameOverLabel: SKLabelNode!
     var popupTime = 0.85
     var numRounds = 0
     
     var score = 0 {
         didSet {
             gameScore.text = "Score: \(score)"
+            gameOverLabel.text = "Score: \(score)"
         }
     }
     
@@ -32,6 +34,14 @@ class GameScene: SKScene {
         gameScore.horizontalAlignmentMode = .left
         gameScore.fontSize = 48
         addChild(gameScore)
+        
+        gameOverLabel = SKLabelNode(fontNamed: "Chalkduster")
+        gameOverLabel.text = "Score: 0"
+        gameOverLabel.position = CGPoint(x: 390, y: 320)
+        gameOverLabel.horizontalAlignmentMode = .left
+        gameOverLabel.fontSize = 48
+        gameOverLabel.zPosition = 2
+        //addChild(gameOverLabel)
         
         for i in 0..<5 { createSlot(at: CGPoint(x: 100 + i*170, y: 410)) }
         for i in 0..<4 { createSlot(at: CGPoint(x: 180 + i*170, y: 320)) }
@@ -87,6 +97,7 @@ class GameScene: SKScene {
             gameOver.zPosition = 1
             addChild(gameOver)
             run(SKAction.playSoundFileNamed("gameover", waitForCompletion: true))
+            addChild(gameOverLabel!)
             return
         }
         popupTime *= 0.991
