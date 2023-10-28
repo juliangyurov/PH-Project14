@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		35A923302AED51030030B7E1 /* bokeh.sks in Resources */ = {isa = PBXBuildFile; fileRef = 35A9232F2AED51030030B7E1 /* bokeh.sks */; };
 		35AD41352AEAD1CA0024DFF8 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 35AD41342AEAD1CA0024DFF8 /* AppDelegate.swift */; };
 		35AD41372AEAD1CA0024DFF8 /* GameScene.sks in Resources */ = {isa = PBXBuildFile; fileRef = 35AD41362AEAD1CA0024DFF8 /* GameScene.sks */; };
 		35AD413B2AEAD1CA0024DFF8 /* GameScene.swift in Sources */ = {isa = PBXBuildFile; fileRef = 35AD413A2AEAD1CA0024DFF8 /* GameScene.swift */; };
@@ -23,6 +24,7 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		35A9232F2AED51030030B7E1 /* bokeh.sks */ = {isa = PBXFileReference; lastKnownFileType = file.sks; path = bokeh.sks; sourceTree = "<group>"; };
 		35AD41312AEAD1CA0024DFF8 /* Project14.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Project14.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		35AD41342AEAD1CA0024DFF8 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		35AD41362AEAD1CA0024DFF8 /* GameScene.sks */ = {isa = PBXFileReference; lastKnownFileType = file.sks; path = GameScene.sks; sourceTree = "<group>"; };
@@ -74,6 +76,8 @@
 				35AD41362AEAD1CA0024DFF8 /* GameScene.sks */,
 				35AD413A2AEAD1CA0024DFF8 /* GameScene.swift */,
 				35AD413C2AEAD1CA0024DFF8 /* GameViewController.swift */,
+				35A9232F2AED51030030B7E1 /* bokeh.sks */,
+				35FC9F052AED23450096AB6F /* FireParticles.sks */,
 				35AD414F2AEAE46A0024DFF8 /* WhackSlot.swift */,
 				35AD413E2AEAD1CA0024DFF8 /* Main.storyboard */,
 				35AD41412AEAD1CE0024DFF8 /* Assets.xcassets */,
@@ -81,7 +85,6 @@
 				35AD414B2AEAD5AF0024DFF8 /* whack.caf */,
 				35AD414C2AEAD5B00024DFF8 /* whackBad.caf */,
 				35AD713D2AED109F00ABC515 /* gameover.mp3 */,
-				35FC9F052AED23450096AB6F /* FireParticles.sks */,
 			);
 			path = Project14;
 			sourceTree = "<group>";
@@ -153,6 +156,7 @@
 				35AD41452AEAD1CE0024DFF8 /* LaunchScreen.storyboard in Resources */,
 				35FC9F042AED22F90096AB6F /* Assets.xcassets in Resources */,
 				35AD414E2AEAD5B00024DFF8 /* whackBad.caf in Resources */,
+				35A923302AED51030030B7E1 /* bokeh.sks in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

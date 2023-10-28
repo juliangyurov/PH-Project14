@@ -11,6 +11,7 @@ class GameScene: SKScene {
     var slots = [WhackSlot]()
     var gameScore: SKLabelNode!
     var gameOverLabel: SKLabelNode!
+    var gameOver: SKSpriteNode!
     var popupTime = 0.85
     var numRounds = 0
     
@@ -77,6 +78,17 @@ class GameScene: SKScene {
                 run(SKAction.playSoundFileNamed("whack.caf", waitForCompletion: false))
             }
         }
+        if numRounds >= 30 {
+            print("gameOver tapped")
+            gameOver.removeFromParent()
+            gameOverLabel.removeFromParent()
+            score = 0
+            popupTime = 0.85
+            numRounds = 0
+            DispatchQueue.main.asyncAfter(deadline: .now() + 1) { [weak self] in
+                self?.createEnemy()
+            }
+        }
     }
     
     func createSlot(at position: CGPoint) {
@@ -92,9 +104,10 @@ class GameScene: SKScene {
             for slot in slots {
                 slot.hide()
             }
-            let gameOver = SKSpriteNode(imageNamed: "gameOver")
+            gameOver = SKSpriteNode(imageNamed: "gameOver")
             gameOver.position = CGPoint(x: 512, y: 384)
             gameOver.zPosition = 1
+            gameOver.name = "gameOver"
             addChild(gameOver)
             run(SKAction.playSoundFileNamed("gameover", waitForCompletion: true))
             addChild(gameOverLabel!)
